@@ -1,0 +1,29 @@
+{
+  "name": "backbone-anchor-handler",
+  "version": "0.0.1",
+  "description": "Catch anchor clicks and try routing them via Backbone.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/mbrevda/backbone-anchor-handler.git"
+  },
+  "keywords": [
+    "backbone",
+    "anchor",
+    "a",
+    "element",
+    "click"
+  ],
+  "author": "mbrevda@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mbrevda/backbone-anchor-handler/issues"
+  },
+  "homepage": "https://github.com/mbrevda/backbone-anchor-handler#readme",
+  "peerDependencies": {
+    "jquery": "^2"
+  }
+}
