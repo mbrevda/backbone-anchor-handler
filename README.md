@@ -26,7 +26,8 @@ You can specify backbone specific routing considerations by specifying `data` at
 By default, all routing will be done with `{trigger: true, replace: false}`
 
 To disable triggering: add `data-bb-trigger="false"`
+
 To specify replace: add `data-bb-replace`
 
 To route a link **without affecting history**, you can add `data-bb-transparent`.
-This option will bypass all history, and the url wont be updated, while still routing the request via Backbone's router. 
+This option will bypass all history, and the url wont be updated, while still routing the request via Backbone's router.

@@ -1,6 +1,6 @@
 {
   "name": "backbone-anchor-handler",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Catch anchor clicks and try routing them via Backbone.js",
   "main": "index.js",
   "scripts": {

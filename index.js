@@ -25,7 +25,7 @@ module.exports = {
             if(this.hasRouteHandler(href)) {
                 e.preventDefault();
                 var opts = this.getOpts($(e.currentTarget))
-                if (opts.invisible) return this.Backbone.history.loadUrl(href)
+                if (opts.transparent) return this.Backbone.history.loadUrl(href)
                 return this.Backbone.history.navigate(href, opts)
             }
         }
@@ -40,12 +40,12 @@ module.exports = {
         //http://backbonejs.org/#Router-navigate
         var trigger = true,
             replace = false,
-            invisible = false
+            transparent = false
 
         if (typeof el.data('bb-trigger') !== 'undefined') trigger = el.data('bb-trigger') == 'true'
-        if (typeof el.data('bb-replace') !== 'undefined') replace = el.data('bb-replace') === '' || el.data('bb-replace') == 'true'
-        if (typeof el.data('bb-invisible') !== 'undefined') invisible = el.data('bb-invisible') === '' || el.data('bb-invisible') == 'true'
+        if (typeof el.data('bb-replace') !== 'undefined') replace = el.data('bb-replace') === ''
+        if (typeof el.data('bb-transparent') !== 'undefined') transparent = el.data('bb-transparent') === ''
 
-        return {trigger, replace, invisible}
+        return {trigger, replace, transparent}
     }
 }
