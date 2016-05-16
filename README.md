@@ -20,3 +20,13 @@ anchorHandler.init(Backbone)
 ```
 
 Thats all! Now your all set to have you links routed via Backbone!
+
+# Special routing considerations
+You can specify backbone specific routing considerations by specifying `data` attributes with the required behavior.
+By default, all routing will be done with `{trigger: true, replace: false}`
+
+To disable triggering: add `data-bb-trigger="false"`
+To specify replace: add `data-bb-replace`
+
+To route a link **without affecting history**, you can add `data-bb-transparent`.
+This option will bypass all history, and the url wont be updated, while still routing the request via Backbone's router. 

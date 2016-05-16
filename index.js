@@ -24,7 +24,9 @@ module.exports = {
 
             if(this.hasRouteHandler(href)) {
                 e.preventDefault();
-                this.Backbone.history.navigate(href, {trigger: true});
+                var opts = this.getOpts($(e.currentTarget))
+                if (opts.invisible) return this.Backbone.history.loadUrl(href)
+                return this.Backbone.history.navigate(href, opts)
             }
         }
     },
@@ -33,5 +35,17 @@ module.exports = {
     },
     hasRouteHandler: function(href) {
         return _(this.Backbone.history.handlers).find(r => r.route.test(href));
+    },
+    getOpts: function(el) {
+        //http://backbonejs.org/#Router-navigate
+        var trigger = true,
+            replace = false,
+            invisible = false
+
+        if (typeof el.data('bb-trigger') !== 'undefined') trigger = el.data('bb-trigger') == 'true'
+        if (typeof el.data('bb-replace') !== 'undefined') replace = el.data('bb-replace') === '' || el.data('bb-replace') == 'true'
+        if (typeof el.data('bb-invisible') !== 'undefined') invisible = el.data('bb-invisible') === '' || el.data('bb-invisible') == 'true'
+
+        return {trigger, replace, invisible}
     }
 }
