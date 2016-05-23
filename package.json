@@ -1,8 +1,8 @@
 {
   "name": "backbone-anchor-handler",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Catch anchor clicks and try routing them via Backbone.js",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

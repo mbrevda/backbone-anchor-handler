@@ -5,8 +5,7 @@ build:
         - script:
             name: compile to es5
             code: >
-                node_modules/babel-cli/bin/babel.js --presets babel-preset-es2015 index.js > index.js2;
-                mv index.js2 index.js
+                node_modules/babel-cli/bin/babel.js index.js --presets babel-preset-es2015 --out-dir dist
        #- npm-test
 
 deploy:
